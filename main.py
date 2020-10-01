@@ -1,5 +1,6 @@
 import csv
 import io
+import os
 import geojson
 from config import *
 
@@ -34,7 +35,8 @@ geoJsonFeatures = [] # Tableau contenant les Features créées, une Feature éta
 
 for row in accidentsVelosNantes.values():
     try:
-        pointAccident = geojson.Point((int(row["lat"]) / 100000, int(row["long"]) / 100000))
+        pointAccident = geojson.Feature(geometry=geojson.Point((int(row["long"]) / 100000, int(row["lat"]) / 100000)))
+
         geoJsonFeatures.append(pointAccident)
     except ValueError:
         print("Error : ")
@@ -42,9 +44,11 @@ for row in accidentsVelosNantes.values():
 
 listePoints = geojson.FeatureCollection(geoJsonFeatures)
 
-# print("Il y a eu "+str(len(accidentsVelos))+" accidents de la route concernant des cyclistes en France. "+str(len(accidentsVelosNantes))+" en Loire-Atlantique.")
-print(listePoints)
-
-outputJson = open("output.json", "a")
+if os.path.exists(outputPath):
+    os.remove(outputPath)
+outputJson = open(outputPath, "a")
 outputJson.write(str(listePoints))
 outputJson.close()
+
+
+print("Il y a eu "+str(len(accidentsVelos))+" accidents de la route concernant des cyclistes en France. "+str(len(accidentsVelosNantes))+" en Loire-Atlantique.")
