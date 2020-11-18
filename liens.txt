@@ -6,4 +6,6 @@ Visualiseur de données GeoJSON : https://geojson.io/
 
 Il y avait 586km d'aménagements cyclables en 2020 : https://metropole.nantes.fr/actualites/2020/deplacements-stationnement/pieton-velo-un-plan-ambitieux
 
-il y avait 566km d'aménagements cyclables en 2018 : https://entreprises.nantesmetropole.fr/files/live/sites/portailentreprise/files/T%C3%A9l%C3%A9chargements/3.2_Plaquette%20Velo.pdf
+Il y avait 566km d'aménagements cyclables en 2018 : https://entreprises.nantesmetropole.fr/files/live/sites/portailentreprise/files/T%C3%A9l%C3%A9chargements/3.2_Plaquette%20Velo.pdf
+
+Il y avait 470km d'aménagements cyclables en 2015 : https://www.cerema.fr/fr/system/files/documents/2017/11/Politique_cyclable_de_Nantes_Metropole_cle538e94.pdf
