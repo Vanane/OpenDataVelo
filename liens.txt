@@ -3,3 +3,7 @@ CSV accidents de la route corporels : https://www.data.gouv.fr/fr/datasets/base-
 CSV Aménagements cyclables de Nantes : https://www.data.gouv.fr/fr/datasets/amenagements-cyclables-de-nantes-metropole-1/
 
 Visualiseur de données GeoJSON : https://geojson.io/
+
+Il y avait 586km d'aménagements cyclables en 2020 : https://metropole.nantes.fr/actualites/2020/deplacements-stationnement/pieton-velo-un-plan-ambitieux
+
+il y avait 566km d'aménagements cyclables en 2018 : https://entreprises.nantesmetropole.fr/files/live/sites/portailentreprise/files/T%C3%A9l%C3%A9chargements/3.2_Plaquette%20Velo.pdf
