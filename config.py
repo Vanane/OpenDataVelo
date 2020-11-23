@@ -1,13 +1,17 @@
 ##############################
 # Variables de configuration #
 ##############################
-pathToCaracteristiques = "./csv/caracteristiques-2018.csv"
-pathToLieux = "./csv/lieux-2018.csv"
-pathToUsagers = "./csv/usagers-2018.csv"
-pathToVehicules = "./csv/vehicules-2018.csv"
+relPath = "./csv"
+pathToCaracteristiques = "caracteristiques.csv"
+pathToLieux = "lieux.csv"
+pathToUsagers = "usagers.csv"
+pathToVehicules = "vehicules.csv"
+
+annees = { "2015", "2016", "2017", "2018", "2019" }
 
 filtresVehicules = {"01", "99"} # 01 est le code pour bicyclettes. 99 est le code pour piétons non-motorisés.
 filtresDepartements = {"440"} # Département 44
 
-outputPath = "output.json" # Fichier de sortie pour le geoJson
+outputPath = "./"
+
 ##############################
