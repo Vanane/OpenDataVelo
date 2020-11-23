@@ -49,7 +49,7 @@ def readFiles(annee):
                 print("Erreur, passage à la ligne suivante.")
 
     listePoints = geojson.FeatureCollection(geoJsonFeatures)
-    outputFile = outputPath + "output" + annee + ".json"
+    outputFile = outputPath + '/' + "accidents" + annee + ".json"
     if os.path.exists(outputFile):
         os.remove(outputFile)
     outputJson = open(outputFile, "a")
