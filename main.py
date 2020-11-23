@@ -37,11 +37,16 @@ def readFiles(annee):
     for row in accidentsVelosNantes.values():
         try:
             pointAccident = geojson.Feature(geometry=geojson.Point((int(row["long"]) / 100000, int(row["lat"]) / 100000)))
-
             geoJsonFeatures.append(pointAccident)
-        except ValueError:
-            print("Error : ")
-            print(row)
+        except ValueError as err:
+            try:
+                print("Attention : latitude et longitude au format à virgule (",str(row["lat"]) + ";" + str(row["long"])+")")
+                row["long"] = row["long"].replace(',', '.', 1).strip()
+                row["lat"] = row["lat"].replace(',', '.', 1).strip()
+                pointAccident = geojson.Feature(geometry=geojson.Point((float(row["long"]), float(row["lat"]))))
+                geoJsonFeatures.append(pointAccident)
+            except:
+                print("Erreur, passage à la ligne suivante.")
 
     listePoints = geojson.FeatureCollection(geoJsonFeatures)
     outputFile = outputPath + "output" + annee + ".json"
@@ -51,10 +56,10 @@ def readFiles(annee):
     outputJson.write(str(listePoints))
     outputJson.close()
 
-
     print("En " + annee + ", il y a eu "+str(len(accidentsVelos))+" accidents de la route concernant des cyclistes en France. "+str(len(accidentsVelosNantes))+" en Loire-Atlantique.")
 
 
+# Programme Principal
 if len(sys.argv) > 1:
     readFiles(sys.argv[1])
 else:
