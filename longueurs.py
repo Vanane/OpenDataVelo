@@ -6,8 +6,8 @@ import csv
 import sys
 
 
-fnX = 23.7
-fnY = -47307
+fnX = 23.714285714286
+fnY = -47307.428571429
 
 
 def GetImage(annee, x, y):
